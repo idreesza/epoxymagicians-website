@@ -37,6 +37,7 @@
 .citygrid a:hover{background:var(--navy);color:#fff}
 
 /* Reviews */
+#live-reviews-home{border:2px dashed rgba(255,255,255,.28);border-radius:var(--radius);padding:28px;text-align:center;color:#9fb0bd;margin-bottom:28px;font-size:.9rem}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .review{margin:0;background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:22px}
 .review .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
@@ -81,7 +82,7 @@ details[name=faq] .ans p{margin:0;color:var(--muted)}
   .mobilebar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:120;box-shadow:0 -4px 16px rgba(0,0,0,.18)}
   .mobilebar a{padding:16px;text-align:center;font-weight:800;text-decoration:none;color:#fff;min-height:56px;display:flex;align-items:center;justify-content:center}
   .mb-call{background:var(--ok)}
-  .mb-quote{background:var(--brand)}
+  .mobilebar .mb-quote{background:var(--brand);color:var(--navy)}
   body{padding-bottom:56px}
 }
 

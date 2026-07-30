@@ -1,0 +1,26 @@
+{
+  "_comment": "Single source of truth for business facts referenced site-wide. Every value below is still a [[PLACEHOLDER]] — replace with the real value, then run `python _gen/apply_business_config.py` from repo root to bake it into every HTML/XML file in one pass. Any field left as a [[PLACEHOLDER]] is skipped by the script and stays clearly marked as incomplete in the shipped HTML — nothing is invented.",
+
+  "phone_display": "[[PHONE]]",
+  "phone_e164": "[[PHONE_E164]]",
+  "license_number": "[[LICENSE]]",
+  "insurance_carrier": "[[INSURANCE]]",
+  "years_in_business": "[[YEARS]]",
+  "jobs_completed": "[[JOBS]]",
+  "founding_year": "[[FOUNDING_YEAR]]",
+  "google_rating": "[[GRATING]]",
+  "google_review_count": "[[GREVIEWS]]",
+  "financing_partner": "[[FINANCING_PARTNER]]",
+  "google_maps_embed_api_key": "[[GOOGLE_MAPS_EMBED_API_KEY]]",
+  "privacy_contact_email": "[[PRIVACY_CONTACT_EMAIL]]",
+  "street_address": "[[ADDRESS]]",
+
+  "google_reviews_widget_embed_snippet": "[[GOOGLE_REVIEWS_WIDGET_EMBED]]",
+  "_google_reviews_widget_note": "Paste the <script>/<div> snippet from your chosen Google reviews widget provider here once your Google Business Profile is live and connected. Must load async/defer. Left blank until then — homepage and /reviews/ show the static testimonial fallback instead.",
+
+  "team": [
+    { "name": "[[Owner Name]]", "role": "Owner & Lead Installer", "bio": "[[Real bio.]]", "photo": "REPLACE-ME" },
+    { "name": "[[Team Member Name]]", "role": "Crew Lead", "bio": "[[Real bio.]]", "photo": "REPLACE-ME" },
+    { "name": "[[Team Member Name]]", "role": "Estimator", "bio": "[[Real bio.]]", "photo": "REPLACE-ME" }
+  ]
+}

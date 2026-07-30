@@ -1,0 +1,11 @@
+{
+  "_comment": "Real customer reviews go here. Need at least 6-8 before launch: 3 feature on the homepage, 6 on /reviews/, and any whose \"city\" matches a service-area page slug (see service-areas/*/index.html for slugs, e.g. \"Plano\", \"Fort Worth\") will replace that city page's placeholder testimonial. Do not fabricate — leave this array short rather than inventing entries. Run `python _gen/apply_business_config.py` after adding reviews to bake them in; pages with no matching real review keep their [[PLACEHOLDER]] marker.",
+  "_schema_example": {
+    "name": "Real first name + last initial, e.g. \"Sarah M.\"",
+    "city": "Must match a service-area page name exactly for city-page injection, e.g. \"Plano\"",
+    "service": "e.g. \"Garage Floor Epoxy\", \"Metallic Epoxy\", \"Commercial Epoxy\"",
+    "rating": "1-5 integer",
+    "text": "The real review text, verbatim or lightly trimmed for length"
+  },
+  "reviews": []
+}

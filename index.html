@@ -24,6 +24,8 @@
 <meta name="description" content="Epoxy Magicians installs garage, metallic &amp; polyaspartic floor coatings across Dallas–Fort Worth. Free estimates, same-week install, [[YEARS]]-year workmanship warranty. Call [[PHONE]].">
 <link rel="canonical" href="https://epoxymagicians.com/">
 <meta name="theme-color" content="#0d1b2a">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
@@ -48,7 +50,7 @@
   --navy:#0d1b2a;--navy-2:#12263a;--ink:#14202b;--paper:#ffffff;--mist:#f4f6f8;
   --line:#dfe5ea;--muted:#4a5a68;
   --brand:#ff6a00;--brand-ink:#7a2f00;--brand-hover:#e85d00;
-  --gold:#f5b301;--ok:#0a7d3c;
+  --gold:#f5b301;--gold-dark:#8c6600;--ok:#0a7d3c;
   --shadow:0 6px 24px rgba(13,27,42,.12);
   --radius:14px;--wrap:1160px;
   --font:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -66,7 +68,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
 .skip:focus{left:12px;top:12px}
 .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;text-decoration:none;border-radius:10px;padding:14px 22px;line-height:1;transition:background .15s,transform .05s;min-height:48px}
 .btn:active{transform:translateY(1px)}
-.btn-cta{background:var(--brand);color:#fff}
+.btn-cta{background:var(--brand);color:var(--navy)}
 .btn-cta:hover{background:var(--brand-hover)}
 .btn-call{background:#fff;color:var(--navy);border:2px solid var(--navy)}
 .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
@@ -114,7 +116,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
 .trust{display:flex;gap:12px;align-items:center}
 .trust .n{font-size:1.5rem;font-weight:800;color:var(--navy);line-height:1}
 .trust .l{font-size:.82rem;color:var(--muted);font-weight:600}
-.stars{color:var(--gold);letter-spacing:2px}
+.stars{color:var(--gold-dark);letter-spacing:2px}
 
 @media(max-width:900px){
   .hero .wrap{grid-template-columns:1fr;padding-block:36px}
@@ -187,7 +189,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
     </nav>
     <div class="header-actions">
       <a class="tel" href="tel:[[PHONE_E164]]" aria-label="Call Epoxy Magicians at [[PHONE]]">☎ [[PHONE]]</a>
-      <a class="btn btn-cta" href="/contact/">Get Free Estimate</a>
+      <a class="btn btn-cta" href="/contact/" aria-label="Get a free epoxy flooring estimate">Get Free Estimate</a>
     </div>
   </div>
 </header>
@@ -204,8 +206,8 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
       <h1>Epoxy &amp; Metallic Floor Coatings in Dallas–Fort Worth</h1>
       <p class="lede">Free estimates, same-week install, and a [[YEARS]]-year workmanship warranty on every garage, patio and commercial floor.</p>
       <div class="cta-row">
-        <a class="btn btn-cta" href="#quote">Get My Free Estimate</a>
-        <a class="btn btn-ghost" href="tel:[[PHONE_E164]]">☎ Call [[PHONE]]</a>
+        <a class="btn btn-cta" href="#quote" aria-label="Get a free estimate for Epoxy & Metallic Floor Coatings in Dallas–Fort Worth">Get My Free Estimate</a>
+        <a class="btn btn-ghost" href="tel:[[PHONE_E164]]" aria-label="Call now about Epoxy & Metallic Floor Coatings in Dallas–Fort Worth">☎ Call [[PHONE]]</a>
       </div>
       <div class="microtrust">
         <span><b>★ [[GRATING]]</b> · [[GREVIEWS]] Google reviews</span>
@@ -275,8 +277,8 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
     <p class="section-sub">Drag the slider to compare a bare, oil-stained slab with a finished Epoxy Magicians floor. <em>[[Replace with a real before/after job photo]]</em></p>
     <div class="ba" id="ba">
       <img class="ba-after" src="/assets/img/ba-after-800.webp" width="1200" height="750" alt="Garage floor after metallic epoxy coating — glossy, seamless finish" loading="lazy" decoding="async">
-      <div class="ba-before-wrap" aria-hidden="true">
-        <img class="ba-before" src="/assets/img/ba-before-800.webp" width="1200" height="750" alt="" loading="lazy" decoding="async">
+      <div class="ba-before-wrap">
+        <img class="ba-before" src="/assets/img/ba-before-800.webp" width="1200" height="750" alt="Bare, oil-stained concrete garage floor before Epoxy Magicians coating" loading="lazy" decoding="async">
       </div>
       <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after photo">
       <span class="ba-tag ba-tag-before">Before</span>
@@ -331,22 +333,31 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
 <section class="section section-navy" aria-labelledby="rev-h">
   <div class="wrap">
     <h2 id="rev-h" class="section-title" style="color:#fff">What DFW homeowners say</h2>
-    <p class="section-sub" style="color:#c8d3dc"><em>[[Replace all three with real Google reviews — name, city, text]]</em></p>
+
+    <!-- Live Google reviews widget slot — embed your GBP reviews widget script here
+         once your Business Profile is live, loaded async/defer so it never blocks
+         rendering. The static testimonials below always render regardless of
+         whether this widget loads, so the page degrades gracefully if it fails. -->
+    <div id="live-reviews-home">
+      [[Embed your live Google Business Profile reviews widget here — load its script with async/defer.]]
+    </div>
+
+    <p class="section-sub" style="color:#c8d3dc"><em>[[Replace all three below with real Google reviews — name, city, text]]</em></p>
     <div class="reviews">
       <blockquote class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“Crew showed up on time, ground the slab properly, and my metallic floor looks unreal. Done in one day.”</p>
-        <cite>— [[Name]], Plano</cite>
+        <p>“[[Real review text]]”</p>
+        <cite>— [[Name]], [[City]]</cite>
       </blockquote>
       <blockquote class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“Got three quotes. Epoxy Magicians explained the polyaspartic difference and it's held up through two Texas summers.”</p>
-        <cite>— [[Name]], Fort Worth</cite>
+        <p>“[[Real review text]]”</p>
+        <cite>— [[Name]], [[City]]</cite>
       </blockquote>
       <blockquote class="review">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“Coated our shop floor over a weekend so we never lost a day of business. Highly recommend.”</p>
-        <cite>— [[Name]], Arlington</cite>
+        <p>“[[Real review text]]”</p>
+        <cite>— [[Name]], [[City]]</cite>
       </blockquote>
     </div>
     <p style="text-align:center;margin-top:24px"><a class="btn btn-cta" href="/reviews/">Read all [[GREVIEWS]] reviews</a></p>
@@ -399,8 +410,8 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
     <h2 id="cta-h">Ready for a floor that lasts?</h2>
     <p>Free on-site estimate anywhere in Dallas–Fort Worth — usually within 24–48 hours.</p>
     <div class="cta-row">
-      <a class="btn btn-cta" href="/contact/">Get My Free Estimate</a>
-      <a class="btn btn-ghost" href="tel:[[PHONE_E164]]">☎ Call [[PHONE]]</a>
+      <a class="btn btn-cta" href="/contact/" aria-label="Get your free Epoxy & Metallic Floor Coatings in Dallas–Fort Worth estimate now">Get My Free Estimate</a>
+      <a class="btn btn-ghost" href="tel:[[PHONE_E164]]" aria-label="Call us now to discuss Epoxy & Metallic Floor Coatings in Dallas–Fort Worth">☎ Call [[PHONE]]</a>
     </div>
   </div>
 </section>

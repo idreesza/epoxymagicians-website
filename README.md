@@ -58,15 +58,40 @@ Export tip: `cwebp -q 78 input.jpg -o output.webp` (or Squoosh). Target hero < 1
 
 ---
 
+## Security headers (`vercel.json`)
+
+CSP, HSTS, X-Frame-Options, COOP, X-Content-Type-Options and Referrer-Policy are set at the hosting level in `vercel.json` (not HTML meta tags, since `frame-ancestors`/HSTS aren't enforceable via `<meta>`). Two things to know before you change site architecture:
+
+- **`script-src`/`style-src` include `'unsafe-inline'`** because every page uses inline critical CSS and inline `<script>` (the before/after slider, JSON-LD, footer year, gallery filter). This is the pragmatic tradeoff for a no-build static site — tightening it to a nonce/hash-based policy would require a build step to inject a fresh nonce per request, which is a real architecture change, not a launch-prep fix.
+- **`frame-src` only allows `https://www.google.com`**, for the contact page's embedded map. When you pick a Google reviews widget provider for the `#live-reviews` / `#live-reviews-home` slots (see below), you'll likely need to add that provider's domain to `script-src`/`frame-src` in `vercel.json` — it'll otherwise be silently blocked by CSP.
+
+---
+
+## Domain setup — one manual step still needed
+
+`epoxymagicians.com` and `www.epoxymagicians.com` are both already attached to the Vercel project and DNS-verified (`vercel domains verify <domain>` returns `configured-correctly` for both). **But the live redirect currently points the wrong way**: hitting `https://epoxymagicians.com/` returns a 308 redirect to `www.epoxymagicians.com`, while every canonical tag, JSON-LD `url`/`@id`, the sitemap, and `robots.txt` in this codebase all use the non-www form. That mismatch is exactly the duplicate-content risk to fix before relying on Search Console.
+
+Vercel's bulk `redirects` CLI feature needs a Pro plan (not available on the current tier), so this has to be flipped in the dashboard:
+
+1. Go to **vercel.com/idreeszas-projects/epoxymagicians/settings/domains**.
+2. Find `www.epoxymagicians.com` in the list and edit it — there's a per-domain redirect option (redirect to another domain in the project).
+3. Set `www.epoxymagicians.com` → redirect to → `epoxymagicians.com`, and make sure `epoxymagicians.com` itself has no redirect (i.e., it's the one actually serving content).
+4. Re-check with `curl -I https://epoxymagicians.com/` (expect `200`) and `curl -I https://www.epoxymagicians.com/` (expect a `301`/`308` to the apex) once the change propagates.
+
+---
+
 ## Deploy + index (do this launch day)
 
-1. **Deploy** the folder to any static host with a CDN + HTTPS (Netlify, Vercel, Cloudflare Pages). Ask me to run the `deploy-to-vercel` skill and I'll push it live.
-2. **Verify** in [PageSpeed Insights](https://pagespeed.web.dev) — I can only test a live URL, so run it once deployed and send me the scores; I'll fix any regressions.
-3. **Search Console + Bing Webmaster Tools** — verify the domain, submit `sitemap.xml` in both.
-4. **IndexNow** (near-instant crawl of new/changed pages). Generate a key, host it at `/{key}.txt`, then on each publish:
+1. **Deploy** — already done; the project auto-deploys from `git push` to `main` via the connected GitHub repo.
+2. **Verify** in [PageSpeed Insights](https://pagespeed.web.dev) — test the live URL (once the redirect above is fixed) and send me the scores; I'll fix any regressions.
+3. **Fix the domain redirect** (see above) before submitting anything to Search Console — submitting the non-www sitemap while www serves the actual content will confuse indexing.
+4. **Google Search Console** — add `epoxymagicians.com` as a property (domain property, which covers both www and non-www automatically), verify via DNS TXT record, then Sitemaps → submit `https://epoxymagicians.com/sitemap.xml`.
+5. **Bing Webmaster Tools** — add the site (Bing can import verification straight from Google Search Console if you connect the same Google account), then Sitemaps → submit the same sitemap URL.
+6. **IndexNow** — the key file is already in the repo: `857c8d8740c7779de1180f1914e9f893.txt` (content = the key itself), which needs to be live at `https://epoxymagicians.com/857c8d8740c7779de1180f1914e9f893.txt` for Bing/IndexNow to accept pings. Once the domain redirect is fixed and that key file resolves over HTTPS, ping it for anything new or changed:
    ```bash
-   curl "https://www.bing.com/indexnow?url=https://epoxymagicians.com/services/metallic-epoxy/&key=YOUR_KEY"
+   curl "https://api.indexnow.org/indexnow?url=https://epoxymagicians.com/blog/epoxy-flooring-cost-dallas-2026/&key=857c8d8740c7779de1180f1914e9f893"
    ```
+   For multiple URLs at once (e.g., right after this launch-prep round), POST a JSON body instead of one `curl` per URL — see the [IndexNow docs](https://www.indexnow.org/documentation) for the batch format.
 
 ---
 
