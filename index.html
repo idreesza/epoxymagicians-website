@@ -1,0 +1,467 @@
+<!--
+  Epoxy Magicians — Homepage
+  =========================================================================
+  ⚠️  BEFORE LAUNCH — replace every [[PLACEHOLDER]] below with real data:
+      [[PHONE]]        real phone, e.g. (214) 555-0100  → also update tel: links
+      [[PHONE_E164]]   e.g. +12145550100
+      [[LICENSE]]      real contractor license #
+      [[INSURANCE]]    real insurance carrier + coverage
+      [[YEARS]]        real years in business
+      [[JOBS]]         real completed-jobs count
+      [[GRATING]]      real Google star rating (e.g. 4.9)
+      [[GREVIEWS]]     real Google review count (e.g. 137)
+      [[ADDRESS]]*     real street address OR mark as service-area business
+      Photos:          swap every /assets/img/*.webp for REAL job photos
+      Reviews:         swap testimonial text/names/cities for REAL reviews
+  =========================================================================
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epoxy Flooring Dallas–Fort Worth | Garage &amp; Metallic Coatings | Epoxy Magicians</title>
+<meta name="description" content="Epoxy Magicians installs garage, metallic &amp; polyaspartic floor coatings across Dallas–Fort Worth. Free estimates, same-week install, [[YEARS]]-year workmanship warranty. Call [[PHONE]].">
+<link rel="canonical" href="https://epoxymagicians.com/">
+<meta name="theme-color" content="#0d1b2a">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Epoxy Flooring Dallas–Fort Worth | Epoxy Magicians">
+<meta property="og:description" content="Garage, metallic &amp; polyaspartic floor coatings across DFW. Free estimates, same-week install.">
+<meta property="og:url" content="https://epoxymagicians.com/">
+<meta property="og:image" content="https://epoxymagicians.com/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Preload LCP hero image (replace with real WebP) -->
+<link rel="preload" as="image" href="/assets/img/hero-garage-metallic-1600.webp" imagesrcset="/assets/img/hero-garage-metallic-800.webp 800w, /assets/img/hero-garage-metallic-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+
+<!--
+  Self-hosted font (add the .woff2 files to /assets/fonts/ then uncomment).
+  Until then we ship a zero-request system stack so PageSpeed stays at 100.
+  @font-face{font-family:"Inter";src:url("/assets/fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-display:swap;}
+-->
+
+<!-- CRITICAL CSS (inline, above-the-fold only) -->
+<style>
+:root{
+  --navy:#0d1b2a;--navy-2:#12263a;--ink:#14202b;--paper:#ffffff;--mist:#f4f6f8;
+  --line:#dfe5ea;--muted:#4a5a68;
+  --brand:#ff6a00;--brand-ink:#7a2f00;--brand-hover:#e85d00;
+  --gold:#f5b301;--ok:#0a7d3c;
+  --shadow:0 6px 24px rgba(13,27,42,.12);
+  --radius:14px;--wrap:1160px;
+  --font:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,3.25rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--navy);padding:12px 18px;z-index:200}
+.skip:focus{left:12px;top:12px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;text-decoration:none;border-radius:10px;padding:14px 22px;line-height:1;transition:background .15s,transform .05s;min-height:48px}
+.btn:active{transform:translateY(1px)}
+.btn-cta{background:var(--brand);color:#fff}
+.btn-cta:hover{background:var(--brand-hover)}
+.btn-call{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Header */
+.topbar{background:var(--navy);color:#fff;font-size:.85rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:38px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:600}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(6px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+.brand{font-weight:800;font-size:1.15rem;color:var(--navy);text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+.brand span{color:var(--brand)}
+.nav{margin-left:auto;display:flex;gap:20px;align-items:center}
+.nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--brand)}
+.header-actions{display:flex;gap:10px;align-items:center}
+.header-actions .tel{font-weight:800;color:var(--navy);text-decoration:none;white-space:nowrap}
+.nav-toggle{display:none}
+
+/* Hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,27,42,.94) 0%,rgba(13,27,42,.72) 46%,rgba(13,27,42,.32) 100%);z-index:1}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:56px}
+.hero h1{color:#fff}
+.hero p.lede{font-size:1.15rem;color:#d7e0e8;max-width:34ch;margin:0 0 22px}
+.hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.hero .microtrust{display:flex;gap:18px;flex-wrap:wrap;color:#cdd7df;font-size:.9rem;font-weight:600}
+.hero .microtrust b{color:var(--gold)}
+.quote-card{background:#fff;color:var(--ink);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.quote-card h2{font-size:1.35rem;margin-bottom:.25em}
+.quote-card .sub{color:var(--muted);font-size:.9rem;margin:0 0 14px}
+.field{margin-bottom:12px}
+.field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:5px}
+.field input,.field select{width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:9px;font:inherit;background:#fff;min-height:46px}
+.field input:focus,.field select:focus{border-color:var(--navy)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quote-card .btn-cta{width:100%;justify-content:center;margin-top:4px}
+.quote-card .fineprint{font-size:.75rem;color:var(--muted);margin:.6rem 0 0;text-align:center}
+
+/* Trust bar */
+.trustbar{background:var(--mist);border-bottom:1px solid var(--line)}
+.trustbar .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-block:22px}
+.trust{display:flex;gap:12px;align-items:center}
+.trust .n{font-size:1.5rem;font-weight:800;color:var(--navy);line-height:1}
+.trust .l{font-size:.82rem;color:var(--muted);font-weight:600}
+.stars{color:var(--gold);letter-spacing:2px}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding-block:36px}
+  .nav{display:none}
+  .trustbar .wrap{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .header-actions .tel{display:none}
+  .topbar{display:none}
+}
+</style>
+
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "@id":"https://epoxymagicians.com/#business",
+  "name":"Epoxy Magicians",
+  "url":"https://epoxymagicians.com/",
+  "telephone":"[[PHONE_E164]]",
+  "image":"https://epoxymagicians.com/assets/img/og-cover.jpg",
+  "priceRange":"$$",
+  "description":"Epoxy, metallic, flake and polyaspartic floor coating contractor serving the Dallas–Fort Worth metroplex.",
+  "areaServed":["Dallas TX","Fort Worth TX","Arlington TX","Plano TX","Frisco TX","McKinney TX","Irving TX","Grand Prairie TX","Southlake TX","Flower Mound TX","Denton TX","Mansfield TX","Rockwall TX"],
+  "address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":32.7767,"longitude":-96.7970},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"[[GRATING]]","reviewCount":"[[GREVIEWS]]"},
+  "sameAs":["https://www.google.com/maps/","https://www.facebook.com/","https://www.yelp.com/"]
+}
+</script>
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://epoxymagicians.com/"}]}
+</script>
+<!-- JSON-LD: FAQPage (mirrors visible FAQ) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much does garage floor epoxy cost in the DFW area?","acceptedAnswer":{"@type":"Answer","text":"Most 2-car garage epoxy or polyaspartic floors in Dallas–Fort Worth run $1,800–$4,500 installed, depending on square footage, coating system and concrete repair needed. Flake systems typically start near $5–$8 per square foot and metallic systems near $8–$12 per square foot."}},
+{"@type":"Question","name":"How long does an epoxy garage floor last in Texas heat?","acceptedAnswer":{"@type":"Answer","text":"A professionally installed polyaspartic or epoxy floor lasts 15–20+ years in the Texas climate. Polyaspartic topcoats are UV-stable and resist the yellowing and softening that summer heat causes in cheap DIY epoxy kits."}},
+{"@type":"Question","name":"How long before I can drive on the new floor?","acceptedAnswer":{"@type":"Answer","text":"With a polyaspartic system you can walk on the floor in a few hours and park vehicles in about 24 hours. Traditional epoxy needs 24–72 hours before vehicle traffic."}},
+{"@type":"Question","name":"Do you offer free estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes. Epoxy Magicians provides free, no-obligation on-site estimates across the Dallas–Fort Worth metroplex, usually within 24–48 hours of your request."}}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- Announcement / top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Serving all of Dallas–Fort Worth · Free estimates · Same-week install</span>
+    <a href="tel:[[PHONE_E164]]">Call [[PHONE]]</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Epoxy<span>Magicians</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/services/">Services</a>
+      <a href="/service-areas/">Service Areas</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/about/">About</a>
+    </nav>
+    <div class="header-actions">
+      <a class="tel" href="tel:[[PHONE_E164]]" aria-label="Call Epoxy Magicians at [[PHONE]]">☎ [[PHONE]]</a>
+      <a class="btn btn-cta" href="/contact/">Get Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <img class="hero-bg" src="/assets/img/hero-garage-metallic-1600.webp"
+       srcset="/assets/img/hero-garage-metallic-800.webp 800w, /assets/img/hero-garage-metallic-1600.webp 1600w"
+       sizes="100vw" width="1600" height="900" alt="Freshly installed metallic epoxy garage floor by Epoxy Magicians in Dallas–Fort Worth" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <div>
+      <h1>Epoxy &amp; Metallic Floor Coatings in Dallas–Fort Worth</h1>
+      <p class="lede">Free estimates, same-week install, and a [[YEARS]]-year workmanship warranty on every garage, patio and commercial floor.</p>
+      <div class="cta-row">
+        <a class="btn btn-cta" href="#quote">Get My Free Estimate</a>
+        <a class="btn btn-ghost" href="tel:[[PHONE_E164]]">☎ Call [[PHONE]]</a>
+      </div>
+      <div class="microtrust">
+        <span><b>★ [[GRATING]]</b> · [[GREVIEWS]] Google reviews</span>
+        <span><b>Licensed</b> &amp; Insured</span>
+        <span><b>[[YEARS]]+ yrs</b> in DFW</span>
+      </div>
+    </div>
+
+    <!-- Above-the-fold quote form -->
+    <form class="quote-card" id="quote" action="/thank-you/" method="post" aria-labelledby="quote-h">
+      <h2 id="quote-h">Get a Free Estimate</h2>
+      <p class="sub">60-second request · No pressure · Reply within 24 hrs</p>
+      <div class="field">
+        <label for="q-name">Full name</label>
+        <input id="q-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="grid-2">
+        <div class="field">
+          <label for="q-phone">Phone</label>
+          <input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <label for="q-city">City</label>
+          <input id="q-city" name="city" type="text" autocomplete="address-level2" placeholder="Plano" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="q-service">Service needed</label>
+        <select id="q-service" name="service" required>
+          <option value="" selected disabled>Choose a service…</option>
+          <option>Garage floor epoxy</option>
+          <option>Metallic epoxy</option>
+          <option>Flake / chip epoxy</option>
+          <option>Polyaspartic coating</option>
+          <option>Commercial / industrial</option>
+          <option>Concrete polishing</option>
+          <option>Patio / pool deck</option>
+          <option>Driveway coating</option>
+          <option>Basement floor</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <button class="btn btn-cta" type="submit">Send My Free Estimate Request</button>
+      <p class="fineprint">By submitting you agree to be contacted about your project. No spam.</p>
+    </form>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trustbar" aria-label="Why homeowners trust us">
+  <div class="wrap">
+    <div class="trust"><span class="n stars" aria-hidden="true">★★★★★</span><span class="l"><b>[[GRATING]]</b> rating · [[GREVIEWS]] Google reviews</span></div>
+    <div class="trust"><span class="n">[[YEARS]]+</span><span class="l">Years installing floors in DFW</span></div>
+    <div class="trust"><span class="n">[[JOBS]]+</span><span class="l">Floors completed across the metroplex</span></div>
+    <div class="trust"><span class="n">✓</span><span class="l">Licensed #[[LICENSE]] &amp; insured ([[INSURANCE]])</span></div>
+  </div>
+</section>
+
+<!-- Non-critical, deferred styles + below-the-fold sections -->
+<link rel="stylesheet" href="/assets/css/styles.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
+
+<!-- BEFORE / AFTER -->
+<section class="section" aria-labelledby="ba-h">
+  <div class="wrap">
+    <h2 id="ba-h" class="section-title">See the transformation</h2>
+    <p class="section-sub">Drag the slider to compare a bare, oil-stained slab with a finished Epoxy Magicians floor. <em>[[Replace with a real before/after job photo]]</em></p>
+    <div class="ba" id="ba">
+      <img class="ba-after" src="/assets/img/ba-after-800.webp" width="1200" height="750" alt="Garage floor after metallic epoxy coating — glossy, seamless finish" loading="lazy" decoding="async">
+      <div class="ba-before-wrap" aria-hidden="true">
+        <img class="ba-before" src="/assets/img/ba-before-800.webp" width="1200" height="750" alt="" loading="lazy" decoding="async">
+      </div>
+      <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after photo">
+      <span class="ba-tag ba-tag-before">Before</span>
+      <span class="ba-tag ba-tag-after">After</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-mist" aria-labelledby="svc-h">
+  <div class="wrap">
+    <h2 id="svc-h" class="section-title">Our epoxy &amp; concrete coating services</h2>
+    <p class="section-sub">Residential and commercial floor coatings, installed by our own crews — never subcontracted.</p>
+    <div class="cards">
+      <a class="card" href="/services/garage-floor-epoxy/"><h3>Garage Floor Epoxy</h3><p>Durable flake &amp; solid-color systems built for Texas garages.</p><span class="price">From $5–$8/sq ft</span></a>
+      <a class="card" href="/services/metallic-epoxy/"><h3>Metallic Epoxy</h3><p>High-gloss, marbled metallic finishes with a showroom look.</p><span class="price">From $8–$12/sq ft</span></a>
+      <a class="card" href="/services/flake-epoxy/"><h3>Flake / Chip Epoxy</h3><p>Slip-resistant decorative flake floors in custom color blends.</p><span class="price">From $5–$8/sq ft</span></a>
+      <a class="card" href="/services/polyaspartic-coatings/"><h3>Polyaspartic Coatings</h3><p>1-day install, UV-stable topcoat that won't yellow in the heat.</p><span class="price">From $6–$10/sq ft</span></a>
+      <a class="card" href="/services/commercial-industrial-epoxy/"><h3>Commercial &amp; Industrial</h3><p>Warehouses, shops &amp; showrooms — heavy-traffic rated systems.</p><span class="price">Custom quote</span></a>
+      <a class="card" href="/services/concrete-polishing/"><h3>Concrete Polishing</h3><p>Ground &amp; sealed polished concrete for a low-maintenance finish.</p><span class="price">From $4–$8/sq ft</span></a>
+      <a class="card" href="/services/patio-pool-deck-coating/"><h3>Patio &amp; Pool Deck</h3><p>Cool, textured, slip-resistant coatings for outdoor concrete.</p><span class="price">From $6–$10/sq ft</span></a>
+      <a class="card" href="/services/driveway-coating/"><h3>Driveway Coating</h3><p>UV-stable driveway systems that stand up to sun and tires.</p><span class="price">Custom quote</span></a>
+      <a class="card" href="/services/basement-floor-coating/"><h3>Basement Floor</h3><p>Moisture-tolerant coatings for finished &amp; storm-shelter spaces.</p><span class="price">From $5–$9/sq ft</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section" aria-labelledby="area-h">
+  <div class="wrap">
+    <h2 id="area-h" class="section-title">Serving the entire Dallas–Fort Worth metroplex</h2>
+    <p class="section-sub">Local crews, local scheduling. Tap your city for pricing notes and slab considerations specific to your area.</p>
+    <ul class="citygrid">
+      <li><a href="/service-areas/dallas/">Dallas</a></li>
+      <li><a href="/service-areas/fort-worth/">Fort Worth</a></li>
+      <li><a href="/service-areas/arlington/">Arlington</a></li>
+      <li><a href="/service-areas/plano/">Plano</a></li>
+      <li><a href="/service-areas/frisco/">Frisco</a></li>
+      <li><a href="/service-areas/mckinney/">McKinney</a></li>
+      <li><a href="/service-areas/irving/">Irving</a></li>
+      <li><a href="/service-areas/grand-prairie/">Grand Prairie</a></li>
+      <li><a href="/service-areas/southlake/">Southlake</a></li>
+      <li><a href="/service-areas/flower-mound/">Flower Mound</a></li>
+      <li><a href="/service-areas/denton/">Denton</a></li>
+      <li><a href="/service-areas/mansfield/">Mansfield</a></li>
+      <li><a href="/service-areas/rockwall/">Rockwall</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-navy" aria-labelledby="rev-h">
+  <div class="wrap">
+    <h2 id="rev-h" class="section-title" style="color:#fff">What DFW homeowners say</h2>
+    <p class="section-sub" style="color:#c8d3dc"><em>[[Replace all three with real Google reviews — name, city, text]]</em></p>
+    <div class="reviews">
+      <blockquote class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“Crew showed up on time, ground the slab properly, and my metallic floor looks unreal. Done in one day.”</p>
+        <cite>— [[Name]], Plano</cite>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“Got three quotes. Epoxy Magicians explained the polyaspartic difference and it's held up through two Texas summers.”</p>
+        <cite>— [[Name]], Fort Worth</cite>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“Coated our shop floor over a weekend so we never lost a day of business. Highly recommend.”</p>
+        <cite>— [[Name]], Arlington</cite>
+      </blockquote>
+    </div>
+    <p style="text-align:center;margin-top:24px"><a class="btn btn-cta" href="/reviews/">Read all [[GREVIEWS]] reviews</a></p>
+  </div>
+</section>
+
+<!-- WARRANTY / FINANCING -->
+<section class="section section-mist" aria-labelledby="assure-h">
+  <div class="wrap assure">
+    <div>
+      <h2 id="assure-h" class="section-title">Warranty &amp; financing</h2>
+      <p class="section-sub" style="margin:0">Every floor is backed by our [[YEARS]]-year workmanship warranty and manufacturer product warranties. Financing is available — ask about [[FINANCING_PARTNER]] plans with approved credit.</p>
+    </div>
+    <ul class="assure-list">
+      <li>✓ [[YEARS]]-year workmanship warranty</li>
+      <li>✓ Licensed #[[LICENSE]] &amp; fully insured</li>
+      <li>✓ In-house crews, never subcontracted</li>
+      <li>✓ Free written estimates</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-h">
+  <div class="wrap faq-wrap">
+    <h2 id="faq-h" class="section-title">Epoxy flooring FAQs</h2>
+    <details name="faq" open>
+      <summary>How much does garage floor epoxy cost in DFW?</summary>
+      <div class="ans"><p>Most 2-car garage floors in Dallas–Fort Worth run <strong>$1,800–$4,500 installed</strong>. Flake systems typically start near $5–$8 per square foot and metallic systems near $8–$12 per square foot, depending on concrete repair and coating system.</p></div>
+    </details>
+    <details name="faq">
+      <summary>How long does epoxy last in Texas heat?</summary>
+      <div class="ans"><p>A professionally installed polyaspartic or epoxy floor lasts <strong>15–20+ years</strong>. Polyaspartic topcoats are UV-stable, so they resist the yellowing and softening that summer heat causes in cheap DIY kits.</p></div>
+    </details>
+    <details name="faq">
+      <summary>How soon can I park on it?</summary>
+      <div class="ans"><p>With a polyaspartic system you can <strong>walk on it in a few hours and park in about 24 hours</strong>. Traditional epoxy needs 24–72 hours before vehicle traffic.</p></div>
+    </details>
+    <details name="faq">
+      <summary>Is it safe for kids and pets?</summary>
+      <div class="ans"><p>Yes. Once fully cured, these coatings are inert, non-toxic and easy to clean. We use low-VOC products and ventilate during install.</p></div>
+    </details>
+    <p style="text-align:center;margin-top:8px"><a class="btn btn-call" href="/faq/">See all FAQs</a></p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta" aria-labelledby="cta-h">
+  <div class="wrap">
+    <h2 id="cta-h">Ready for a floor that lasts?</h2>
+    <p>Free on-site estimate anywhere in Dallas–Fort Worth — usually within 24–48 hours.</p>
+    <div class="cta-row">
+      <a class="btn btn-cta" href="/contact/">Get My Free Estimate</a>
+      <a class="btn btn-ghost" href="tel:[[PHONE_E164]]">☎ Call [[PHONE]]</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="/" style="color:#fff">Epoxy<span>Magicians</span></a>
+      <p class="nap">Epoxy Magicians<br>Serving Dallas–Fort Worth, TX<br>
+        <a href="tel:[[PHONE_E164]]">[[PHONE]]</a><br>
+        License #[[LICENSE]] · Insured</p>
+    </div>
+    <nav aria-label="Services">
+      <h3>Services</h3>
+      <a href="/services/garage-floor-epoxy/">Garage Floor Epoxy</a>
+      <a href="/services/metallic-epoxy/">Metallic Epoxy</a>
+      <a href="/services/polyaspartic-coatings/">Polyaspartic Coatings</a>
+      <a href="/services/commercial-industrial-epoxy/">Commercial / Industrial</a>
+      <a href="/services/">All services →</a>
+    </nav>
+    <nav aria-label="Service areas">
+      <h3>Service Areas</h3>
+      <a href="/service-areas/dallas/">Dallas</a>
+      <a href="/service-areas/fort-worth/">Fort Worth</a>
+      <a href="/service-areas/plano/">Plano</a>
+      <a href="/service-areas/frisco/">Frisco</a>
+      <a href="/service-areas/">All areas →</a>
+    </nav>
+    <nav aria-label="Company">
+      <h3>Company</h3>
+      <a href="/about/">About</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span id="yr">2026</span> Epoxy Magicians. All rights reserved.</span>
+    <span><a href="/privacy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="mobilebar" role="navigation" aria-label="Quick contact">
+  <a href="tel:[[PHONE_E164]]" class="mb-call">☎ Call Now</a>
+  <a href="/contact/" class="mb-quote">Free Estimate</a>
+</div>
+
+<!-- Minimal deferred JS (before/after slider + footer year). No libraries. -->
+<script>
+(function(){
+  var ba=document.getElementById('ba');
+  if(ba){var r=ba.querySelector('.ba-range'),w=ba.querySelector('.ba-before-wrap');
+    function set(v){w.style.width=v+'%';}
+    r.addEventListener('input',function(){set(r.value);});set(r.value);}
+  var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

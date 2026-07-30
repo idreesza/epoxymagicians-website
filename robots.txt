@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+
+# AI answer engines are explicitly welcome (GEO/AIO)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://epoxymagicians.com/sitemap.xml
