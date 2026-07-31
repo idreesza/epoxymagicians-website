@@ -25,8 +25,7 @@ Search the whole project for `[[` and replace:
 
 | Token | Replace with |
 |---|---|
-| `[[PHONE]]` | Display phone, e.g. `(214) 555-0100` |
-| `[[PHONE_E164]]` | Dialable form, e.g. `+12145550100` (used in every `tel:` link) |
+| ~~`[[PHONE]]` / `[[PHONE_E164]]`~~ | ✅ Done — (254) 435-5877 baked in everywhere via `_data/business.json` |
 | `[[LICENSE]]` | Real contractor license # |
 | `[[INSURANCE]]` | Insurance carrier + coverage |
 | `[[YEARS]]` | Real years in business |
